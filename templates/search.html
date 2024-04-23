@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+   
+</head>
+
+<body>
+    <h1>Purchase Records</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Sr. No.</th>
+                <th>Reference No.</th>
+                <th>Journal Data</th>
+                <th>Purchase Date</th>
+                <th>Expiry Date</th>
+                <th>Purchaser Name</th>
+                <th>Prefix</th>
+                <th>Bond Number</th>
+                <th>Denomination</th>
+                <th>Branch Code</th>
+                <th>Issue Teller</th>
+                <th>Status</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in purchase_results %}
+            <tr>
+                <td>{{ record.sno }}</td>
+                <td>{{ record.ref }}</td>
+                <td>{{ record.j_date }}</td>
+                <td>{{ record.purchase_date }}</td>
+                <td>{{ record.exp_date }}</td>
+                <td>{{ record.purchaser_name }}</td>
+                <td>{{ record.prefix }}</td>
+                <td>{{ record.bond_no }}</td>
+                <td>{{ record.denominations }}</td>
+                <td>{{ record.branch_code }}</td>
+                <td>{{ record.issue }}</td>
+                <td>{{ record.status }}</td>
+               
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h1>Redemption Records</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Sr. No.</th>
+                <th>Encashment Date</th>
+              
